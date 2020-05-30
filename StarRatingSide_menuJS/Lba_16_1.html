@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        p{
+            float:left;
+            font-weight: bold;
+            font-size:40px;
+            color:goldenrod;
+            
+        }
+        #start{
+            margin-right: 20px;
+            font-size:41px;
+            color:black;
+            
+        }
+    </style>
+     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+
+ <p id="start">Star rating:</p> 
+   <p>&#9734;</p>  
+   <p>&#9734;</p>
+   <p>&#9734;</p>
+   <p>&#9734;</p>
+    <p>&#9734;</p>
+   <script>
+        $(function(){           
+        
+    $('p').bind('click', function(e){
+        //зв не окрашенная
+        var f=$("p:not(:first)");
+        f.each(function(index,elem){elem.innerHTML='&#9734;';});
+        //зв окрашеная
+         e.currentTarget.innerHTML='&#9733;';  
+        var list=$(this).prevUntil('p:first');
+        list.each(function(index,elem){elem.innerHTML='&#9733;';});
+    });
+                });
+    </script>
+</body>
+</html>
