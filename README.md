@@ -1,2 +1,2 @@
-# StarRatingJS
-Star Rating JavaScript jQuery
+# Star Rating and side menu JS
+Star Rating and side menu JavaScript jQuery
